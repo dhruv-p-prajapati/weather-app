@@ -1,0 +1,31 @@
+{
+    "env": {
+      "browser": true, // where the code is designed to run
+      "es2021": true // ECMAScript version
+    },
+    "extends": [ // inherit rules/settings and also override own configuration rules
+      "eslint:recommended",
+      "prettier",
+      "next/core-web-vitals",
+      "plugin:react/recommended",
+      "plugin:prettier/recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react-hooks/recommended"
+    ],
+    "plugins": ["prettier"],
+    "parserOptions": {
+      "ecmaFeatures": { 
+        "jsx": true // allows to use jsx in app
+      },
+      "ecmaVersion": 12, // ES12 = ECMAScript 2021
+      "sourceType": "module" // allows to use import/export module
+    },
+    "rules": {
+      "prettier/prettier": ["error", { "endOfLine": "auto" }],
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-empty-interface": "off"
+    }
+  }
+  
