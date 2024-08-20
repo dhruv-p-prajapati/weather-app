@@ -1,3 +1,69 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 15% 98%; /* Light background */
+    --foreground: 215 20% 10%; /* Dark text for light mode */
+    --card: 210 15% 98%; /* Light card background */
+    --card-foreground: 215 20% 10%; /* Dark text on cards */
+    --popover: 210 15% 98%; /* Light popover background */
+    --popover-foreground: 215 20% 10%; /* Dark popover text */
+    --primary: 210 15% 15%; /* Primary color: #0B121E */
+    --primary-foreground: 210 100% 95%; /* Text on primary: #E1E7F1 */
+    --secondary: 215 20% 24%; /* Secondary color: #202B3C */
+    --secondary-foreground: 210 100% 95%; /* Text on secondary: #E1E7F1 */
+    --muted: 215 10% 85%; /* Muted background */
+    --muted-foreground: 215 20% 40%; /* Muted text */
+    --accent: 215 20% 24%; /* Accent color: #202B3C */
+    --accent-foreground: 210 100% 95%; /* Text on accent: #E1E7F1 */
+    --destructive: 0 65% 50%; /* Destructive color (red) */
+    --destructive-foreground: 210 100% 95%; /* Text on destructive */
+    --border: 215 20% 85%; /* Light border */
+    --input: 215 20% 85%; /* Light input background */
+    --ring: 210 15% 15%; /* Focus ring color */
+    --radius: 0.5rem; /* Border radius */
+    --chart-1: 210 15% 15%; /* Chart color 1: Primary color */
+    --chart-2: 215 20% 24%; /* Chart color 2: Secondary color */
+    --chart-3: 0 65% 50%; /* Chart color 3: Red */
+    --chart-4: 60 100% 70%; /* Chart color 4: Yellow */
+    --chart-5: 280 70% 60%; /* Chart color 5: Purple */
+  }
+
+  .dark {
+    --background: 210 15% 10%; /* Dark background */
+    --foreground: 210 100% 95%; /* Light text for dark mode: #E1E7F1 */
+    --card: 210 15% 15%; /* Dark card background: #0B121E */
+    --card-foreground: 210 100% 95%; /* Light text on cards: #E1E7F1 */
+    --popover: 210 15% 15%; /* Dark popover background: #0B121E */
+    --popover-foreground: 210 100% 95%; /* Light popover text: #E1E7F1 */
+    --primary: 210 15% 15%; /* Primary color: #0B121E */
+    --primary-foreground: 210 100% 95%; /* Text on primary: #E1E7F1 */
+    --secondary: 215 20% 24%; /* Secondary color: #202B3C */
+    --secondary-foreground: 210 100% 95%; /* Text on secondary: #E1E7F1 */
+    --muted: 215 10% 25%; /* Dark muted background */
+    --muted-foreground: 210 100% 95%; /* Light muted text */
+    --accent: 215 20% 24%; /* Accent color: #202B3C */
+    --accent-foreground: 210 100% 95%; /* Text on accent: #E1E7F1 */
+    --destructive: 0 65% 50%; /* Destructive color (red) */
+    --destructive-foreground: 210 100% 95%; /* Text on destructive */
+    --border: 215 20% 24%; /* Dark border: #202B3C */
+    --input: 215 20% 24%; /* Dark input background: #202B3C */
+    --ring: 210 100% 95%; /* Light focus ring: #E1E7F1 */
+    --chart-1: 210 15% 15%; /* Chart color 1: Primary color */
+    --chart-2: 215 20% 24%; /* Chart color 2: Secondary color */
+    --chart-3: 0 65% 50%; /* Chart color 3: Red */
+    --chart-4: 60 100% 70%; /* Chart color 4: Yellow */
+    --chart-5: 280 70% 60%; /* Chart color 5: Purple */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
